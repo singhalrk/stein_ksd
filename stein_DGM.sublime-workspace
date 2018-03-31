@@ -1,0 +1,668 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"math",
+				"\\mathbf{text}                                     \tlatex-document"
+			],
+			[
+				"subse",
+				"\\subsection*{title}                               \tlatex-document"
+			],
+			[
+				"equa",
+				"\\begin{equation*}                                 \tamsmath"
+			],
+			[
+				"resum",
+				"\\resumeSubheading{arg}{arg}{arg}{arg}             \tlocal"
+			],
+			[
+				"res",
+				"\\resumeSubItem{arg}{arg}                          \tlocal"
+			],
+			[
+				"sub",
+				"\\subsection*{title}                               \tlatex-document"
+			],
+			[
+				"date_",
+				"date_rng\tstatement"
+			],
+			[
+				"close",
+				"close_date\tstatement"
+			],
+			[
+				"tim",
+				"timedelta\tclass"
+			],
+			[
+				"start",
+				"start_date\tstatement"
+			],
+			[
+				"da",
+				"date_rng\tstatement"
+			],
+			[
+				"Can",
+				"candlestick"
+			],
+			[
+				"w",
+				"which_key"
+			],
+			[
+				"data",
+				"data_plot"
+			],
+			[
+				"data_",
+				"data_plot\tstatement"
+			],
+			[
+				"dat",
+				"date_rng\tstatement"
+			],
+			[
+				"BT",
+				"BTC-USD"
+			],
+			[
+				"te",
+				"\\textbf{text}                                     \tlatex-document"
+			],
+			[
+				"textb",
+				"\\textbf{text}                                     \tlatex-document"
+			],
+			[
+				"alp",
+				"\\alpha                                            \tlatex-mathsymbols"
+			],
+			[
+				"text",
+				"\\textbackslash                                    \tlatex-document"
+			],
+			[
+				"impl",
+				"\\implies                                          \tamsmath"
+			],
+			[
+				"model",
+				"model_data\tstatement"
+			],
+			[
+				"grad",
+				"grad_norm\tstatement"
+			],
+			[
+				"train",
+				"train_accuracy\tstatement"
+			],
+			[
+				"test",
+				"test_loss\tstatement"
+			],
+			[
+				"mak",
+				"makedirs\tfunction"
+			],
+			[
+				"sec",
+				"\\section{title}                                   \tlatex-document"
+			],
+			[
+				"plot",
+				"plot_count\tparam"
+			],
+			[
+				"x",
+				"xlim\tfunction"
+			],
+			[
+				"Train",
+				"train_progress\tfunction"
+			],
+			[
+				"accept",
+				"accept_r\tstatement"
+			],
+			[
+				"acce",
+				"accept_r\tstatement"
+			],
+			[
+				"as",
+				"asarray\tfunction"
+			],
+			[
+				"hmc",
+				"hmc_steps\tparam"
+			],
+			[
+				"def",
+				"defs\tMethod"
+			],
+			[
+				"clas",
+				"class\tNew Class"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "opvi.tex",
+			"settings":
+			{
+				"buffer_size": 9110,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"PdfLaTeX"
+			]
+		],
+		[
+			[
+				[
+					"Project Build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Project Build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 366.0,
+		"last_filter": "git",
+		"selected_items":
+		[
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"git :add",
+				"Git: Add Remote"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"no",
+				"Notes: List…"
+			],
+			[
+				"nn",
+				"Notes: New…"
+			],
+			[
+				"tuto",
+				"Sublime Tutor: Start"
+			],
+			[
+				"tutor",
+				"Sublime Tutor: Start"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"n",
+				"Notes: New…"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"git ",
+				"Git: Commit"
+			],
+			[
+				"",
+				"LaTeXTools: Reset user settings to default"
+			],
+			[
+				"latextoo",
+				"LaTeXTools: Check system"
+			],
+			[
+				"latex",
+				"LaTeXTools: Jump to PDF"
+			]
+		],
+		"width": 495.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"sublime.version()",
+			"mnist_rk4",
+			"def f(x):",
+			"1+1",
+			"import numpy as np",
+			"ls",
+			";s",
+			"cd",
+			"1+1",
+			"which python",
+			"import numpy as np",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/rsinghal/Desktop/HomeWork/DGM_spring18/Stein_project"
+	],
+	"file_history":
+	[
+		"/Users/rsinghal/Desktop/github-upload/DGM_project/dgm_proposal.tex",
+		"/Users/rsinghal/Desktop/github-upload/market random walk/README.md",
+		"/Users/rsinghal/Desktop/github-upload/untitled.md",
+		"/Users/rsinghal/Desktop/github-upload/market random walk/Readme.md",
+		"/Users/rsinghal/Desktop/github-upload/market random walk/SENSEX.csv",
+		"/Users/rsinghal/Desktop/HomeWork/DGM_spring18/Untitled.ipynb",
+		"/Users/rsinghal/Desktop/cv_jobs/webCrawler.py",
+		"/Users/rsinghal/miniconda3/lib/python3.6/site-packages/h5py/__init__.py",
+		"/Users/rsinghal/miniconda3/lib/python3.6/site-packages/edward/util/random_variables.py",
+		"/Users/rsinghal/miniconda3/lib/python3.6/runpy.py",
+		"/Users/rsinghal/miniconda3/lib/python3.6/site-packages/bs4/__init__.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-new/resume.tex",
+		"/Users/rsinghal/Desktop/inf_rep_project/submission/VAE/noisy_rk4.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-new/mnist/rk2_ralston_f.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-new/mnist/main.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-new/mnist/rk2_ralston.py",
+		"/Users/rsinghal/Dropbox/Notes/g.note",
+		"/Users/rsinghal/Dropbox/Notes/stuff to learn.note",
+		"/Users/rsinghal/Dropbox/Notes/daily-routine.note",
+		"/Users/rsinghal/Dropbox/Notes/.brain/Inbox.note",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/coin-iq/main.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/coin-iq/iq.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/owen_code/stream.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/coinAnalysis/process_data.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/coinAnalysis/read_data.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/raghav_code/data_loader.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/tradenet.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/trade_bot.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/data_loader.py",
+		"/Users/rsinghal/Google Drive/owen_CRYPT/read_data.py",
+		"/Users/rsinghal/Dropbox/Notes/today's tasks.html",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/main.tex",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/notes.tex",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/rk2_heun_notStrong.tex",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/main.pdf",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/opti_inf.sublime-project",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/strongConvex.tex",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/rk2_ralston_notStrong.tex",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/ode_ideas.tex",
+		"/Users/rsinghal/Desktop/optimizerProof/proper_file/experiments.tex",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk2_paper/runge_kutta.tex",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk2_paper/runge_kutta",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/courant_hpc/courant_cifar/main.py",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Default (OSX).sublime-keymap",
+		"/Users/rsinghal/Desktop/daily-work-pdf/28nov2017.tex",
+		"/Users/rsinghal/Desktop/daily-work-pdf/adityaRamesh/log_det.tex",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/courant_hpc/newProgress.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/courant_hpc/VAE/newProgress.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/courant_hpc/courant_cifar/newProgress.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/courant_hpc/VAE/grad_Utils.py",
+		"/Users/rsinghal/Desktop/daily-work-pdf/stuff-to-look-at.tex",
+		"/Users/rsinghal/Desktop/HomeWork/computer_vision/project/pdf_project/cv_project.tex",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/pdf_doc/rungeKutta1.tex",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/pdf_doc/new_dir/rungeKutta1.tex",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/pdf_doc/new_dir/rk2.md",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeXTools.sublime-settings",
+		"/Users/rsinghal/Desktop/DeepLearning/text-files/immediate.txt",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/tutorials/c++Tutorials/tutorial.cpp",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/tutorial.cpp",
+		"/Users/rsinghal/Desktop/HomeWork/inference_and_representation/hw5/hmc.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/mod_rk2.py",
+		"/Users/rsinghal/Desktop/HomeWork/computer_vision/project/stack_gan_experiments/run_job.sh",
+		"/Users/rsinghal/Desktop/HomeWork/computer_vision/project/stack_gan_experiments/model.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/mnist_rk4.py",
+		"/Users/rsinghal/Desktop/DeepLearning/Scripts/rk4/rk4-experiments/rk2.py",
+		"/Users/rsinghal/Desktop/deepLearning/Scripts/python_stuff/new_rk4.py",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/User/Origami.sublime-settings",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/User/Python.sublime-settings",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/rsinghal/Desktop/deepLearning/Scripts/python_stuff/mnist_rk4.py",
+		"/Users/rsinghal/Desktop/deepLearning/Scripts/python_stuff/trial.py",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/User/AutoPep8.sublime-settings",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/AutoPEP8/AutoPep8.sublime-settings",
+		"/Users/rsinghal/Desktop/deepLearning/Scripts/python_stuff/rk4_.py",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/AutoPEP8/Default.sublime-keymap",
+		"/Users/rsinghal/Library/Application Support/Sublime Text 3/Packages/User/sublime_jedi.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 94.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "opvi.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8599,
+								8599
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3136.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.autopep8":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 110.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 110.0
+	},
+	"output.jotter":
+	{
+		"height": 110.0
+	},
+	"output.latextools":
+	{
+		"height": 110.0
+	},
+	"output.markdown":
+	{
+		"height": 110.0
+	},
+	"pinned_build_system": "",
+	"project": "stein_DGM.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/HomeWork/computer_vision/dcgan_1/dcgan_nogit.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 374.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"get_batch_data"
+			]
+		],
+		"width": 360.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 170.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
