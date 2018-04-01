@@ -9,6 +9,90 @@ Add some commong kernels
  ------ find some more  ---------
 """
 
+
+######## make this vectorized ##########
+
+class rbf_kernel:
+    def __init__(self, params = dict(beta=1e-2)):
+        self.beta = params['beta']
+        assert self.beta > 0
+
+    def value(self, x, y):
+        r = ((x - y)**2).sum()
+        return np.exp(-self.beta * r)
+
+    def grad_x(self, x, y):
+        r = ((x - y)**2).sum()
+        return - 2 * self.beta * (x - y) * np.exp(-self.beta * r)
+
+    def grad_y(self, x, y):
+        r = ((x - y)**2).sum()
+        return 2 * self.beta * (x - y) * np.exp(-self.beta * r)
+
+    def grad_xy(self, x, y):
+        assert len(x) == len(y)
+        n = len(x)
+        r = ((x - y)**2).sum()
+        _y = 2 * self.beta * np.exp(-self.beta * r) * np.eye(n)
+        _xy = 2 * self.beta**2 * np.outer(x - y, x - y) * np.exp(-self.beta * r)
+        return _y + _xy
+
+class imq_kernel:
+    def __init__(self, params = dict(beta = 1, c=1)):
+        self.beta = params['beta']
+        self.c = params['c']
+        assert self.beta > 0
+
+    def value(self, x, y):
+        r = ((x - y)**2).sum()
+        return (self.c**2 + r)**(-self.beta)
+
+    def grad_x(self, x, y):
+        r = ((x - y)**2).sum()
+        return -2 * self.beta * (x - y) / (self.c**2 + r)**(-self.beta - 1.)
+
+    def grad_y(self, x, y):
+        r = ((x - y)**2).sum()
+        return 2 * self.beta * (x - y) / (self.c**2 + r)**(-self.beta - 1.)
+
+    def grad_xy(self, x, y):
+        r = ((x - y)**2).sum()
+        p1 = 2 * self.beta * np.exp(- self.beta * r)
+        p2 = 2 * self.beta**2
+        return p1 + p2
+
+class poly_kernel:
+    def __init__(self, params = dict(c=1, degree=1)):
+        self.degree = params['degree']
+        self.c = params['c']
+        assert self.degree > 0
+
+    def value(self, x, y):
+        r = np.dot(x,y)
+        return (self.c + r) ** self.degree
+
+    def grad_x(self, x, y):
+        r = np.dot(x, y)
+        return self.degree * (self.c + r) ** (self.degree - 1) * y
+
+    def grad_y(self, x, y):
+        r = np.dot(x, y)
+        return self.degree * (self.c + r) ** (self.degree - 1) * x
+
+    def grad_xy(self, x, y):
+        n = len(x)
+        r = np.dot(x, y)
+        return self.degree * (self.c + r) ** (self.degree - 1) * np.eye(n)
+
+class kernels_1:
+    def __init__(self, name='rbf', beta=None, c=None, degree=None):
+        self.name = name
+        self.beta = beta
+        self.c = c
+        self.degree = degree
+        self.params = dict(beta=self.beta, degree=self.degree, c=self.c)
+
+##  write kernels gradients manually
 class kernels:
     def __init__(self, name='rbf', beta=None, c=None, degree=None):
         self.name = name
@@ -16,27 +100,22 @@ class kernels:
         self.c = c
         self.degree = degree
 
-    @staticmethod
-    def rbf(x, y, beta=0.5):
-        return np.exp(-((x - y)**2).sum() * beta)
+    def rbf(self, x, y, beta=0.01):
+        return np.exp(- ((x - y)**2).sum() * beta)
 
-    @staticmethod
-    def imq(x, y, c=0.5, beta=-0.5):
-        return (c + ((x - y)**2).sum())**(-beta)
+    def imq(self, x, y, c=1, beta=-1):
+        return (c**2 + ((x - y)**2).sum())**(-beta)
 
-    @staticmethod
-    def polynomial(x, y, c=1, degree=2):
+    def polynomial(self, x, y, c=1, degree=2):
         return (c + np.dot(x,y))**degree
 
     # here we fix y and take a derivative wrt x
     def grad_kx(self,x,y):
         k = self.get_kernel(self.name)
         k_x = lambda x_: k(x_,y)
-
         return grad(k_x)(x)
 
     # here we fix x and take a derivative wrt y
-
     def grad_ky(self,x, y):
         k = self.get_kernel(self.name)
         k_y = lambda y_: k(x,y_)
@@ -44,11 +123,8 @@ class kernels:
 
     # here we take the derivative of k wrt x and y
     def grad_kxy(self,x,y):
-
         kx_y = lambda y_: self.grad_kx(x, y_)
-
         return jacobian(kx_y)(y)
-
 
     def get_kernel(self,name=None):
         if name == None:
@@ -62,5 +138,7 @@ class kernels:
 
         if name == 'polynomial':
             return self.polynomial
+
+
 
 
