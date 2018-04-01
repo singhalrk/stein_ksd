@@ -44,6 +44,22 @@ class gaussian:
 
         return x.grad.data.numpy()
 
+    # write manual gradient here and a test
+    def grad_log_density_1(self,x, z_optim=False):
+        dtype = torch.FloatTensor
+
+        mu = Variable(torch.Tensor(self.mu).type(dtype), requires_grad=z_optim)
+        sigma = Variable(torch.Tensor(self.sigma).type(dtype), requires_grad=False)
+        x = Variable(torch.Tensor(x).type(dtype), requires_grad=True)
+
+        y = (-1/2) * torch.dot(x - mu, torch.inverse(sigma).mv(x - mu))
+        y.backward()
+
+        if z_optim:
+            return dict(x_grad=x.grad, mu_grad=mu.grad)
+
+        return x.grad.data.numpy()
+
         ###### check this grad density
 
     def sampler(self, N, mu=None, sigma=None):
