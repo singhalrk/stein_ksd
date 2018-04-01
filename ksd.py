@@ -1,8 +1,4 @@
 import numpy as np
-# from autograd import grad
-
-# import matplotlib.pyplot as plt
-# import seaborn as sns
 
 from kernels import kernels, rbf_kernel, imq_kernel, poly_kernel
 
@@ -20,8 +16,8 @@ class ksd:
         if name == 'imq':
             self.k_method = imq_kernel(params)
 
-        if name == 'poly':
-            self.k_method = poly_kernel(params)
+        # if name == 'poly':
+        #     self.k_method = poly_kernel(params)
 
         self.k = self.k_method.value
         self.grad_kx = self.k_method.grad_x
@@ -32,19 +28,21 @@ class ksd:
         self.q = params['q']
 
     def h(self, x, y):
+        log_px = self.p.grad_log_density(x)
+        log_py = self.p.grad_log_density(y)
 
-        p1 = self.k(x,y) * np.dot(self.p.grad_log_density(y), self.p.grad_log_density(x))
-        p2 = np.dot(self.grad_kx(x,y), self.p.grad_log_density(y))
-        p3 = np.dot(self.grad_ky(x,y), self.p.grad_log_density(x))
+        p1 = self.k(x,y) * np.dot(log_py, log_px)
+        p2 = np.dot(self.grad_kx(x,y), log_py)
+        p3 = np.dot(self.grad_ky(x,y), log_px)
         p4 = np.sum(self.grad_kxy(x,y))
 
         return p1 + p2 + p3 + p4
 
-    def stein_Op(self, n, m=5):
+    def Op_value(self, n, m=5):
         x_samples = self.q.sampler(n)
         y_samples = self.q.sampler(m)
 
-        stein_average = np.sum(np.array([[self.h(y_i,x_j) for y_i in y_samples] for x_j in tqdm(x_samples)]))
+        stein_average = np.sum(np.array([np.array([self.h(y_i,x_j) for y_i in y_samples]) for x_j in tqdm(x_samples)]))
 
         return stein_average/(n*m)
 

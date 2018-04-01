@@ -33,8 +33,8 @@ class rbf_kernel:
         assert len(x) == len(y)
         n = len(x)
         r = ((x - y)**2).sum()
-        _y = 2 * self.beta * np.exp(-self.beta * r) * np.eye(n)
-        _xy = 2 * self.beta**2 * np.outer(x - y, x - y) * np.exp(-self.beta * r)
+        _y = 2 * self.beta * np.exp(-self.beta * r) * np.ones(n)
+        _xy = 4 * self.beta**2 * (x - y)**2 * np.exp(-self.beta * r)
         return _y + _xy
 
 class imq_kernel:
@@ -45,21 +45,22 @@ class imq_kernel:
 
     def value(self, x, y):
         r = ((x - y)**2).sum()
-        return (self.c**2 + r)**(-self.beta)
+        return 1./(self.c**2 + r)**(self.beta)
 
     def grad_x(self, x, y):
         r = ((x - y)**2).sum()
-        return -2 * self.beta * (x - y) / (self.c**2 + r)**(-self.beta - 1.)
+        return -2 * self.beta * (x - y) / (self.c**2 + r)**(self.beta + 1.)
 
     def grad_y(self, x, y):
         r = ((x - y)**2).sum()
-        return 2 * self.beta * (x - y) / (self.c**2 + r)**(-self.beta - 1.)
+        return 2 * self.beta * (x - y) / (self.c**2 + r)**(self.beta + 1.)
 
     def grad_xy(self, x, y):
         r = ((x - y)**2).sum()
-        p1 = 2 * self.beta * np.exp(- self.beta * r)
-        p2 = 2 * self.beta**2
-        return p1 + p2
+        n = len(x)
+        _y = 2 * self.beta * np.ones(n) / (self.c**2 + r)**(self.beta + 1.)
+        _xy = -4 * self.beta* (self.beta + 1) * (x - y)**2 / (self.c**2 + r)**(self.beta + 2.)
+        return _y + _xy
 
 class poly_kernel:
     def __init__(self, params = dict(c=1, degree=1)):
@@ -82,7 +83,7 @@ class poly_kernel:
     def grad_xy(self, x, y):
         n = len(x)
         r = np.dot(x, y)
-        return self.degree * (self.c + r) ** (self.degree - 1) * np.eye(n)
+        return self.degree * (self.c + r) ** (self.degree - 1) * np.ones(n)
 
 class kernels_1:
     def __init__(self, name='rbf', beta=None, c=None, degree=None):
